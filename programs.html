@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TESDA Training Programs</title>
+  <link rel="icon" href="images/Untitled design (7).png" type="image/png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="loading">
+
+  <!-- ── Preloader ── -->
+  <div id="preloader" class="preloader">
+    <div class="preloader-content">
+      <img src="images/Untitled design (7).png" alt="TESDA Logo" class="preloader-logo" />
+      <div class="preloader-spinner"></div>
+      <p>Loading Training Programs...</p>
+    </div>
+  </div>
+
+  <!-- ── Navbar ── -->
+  <nav>
+    <div class="container nav-container">
+      <div class="nav-logo">
+        <img class="nav-logo-icon" src="images/Untitled design (7).png" alt="TESDA Logo" />
+        <span class="nav-logo-text">TESDA LLDA</span>
+      </div>
+      <div class="nav-links">
+        <a class="nav-link" href="index.html">About</a>
+        <a class="nav-link active" href="programs.html#programs">Programs</a>
+        <a class="nav-link" href="assessments.html">Assessments</a>
+      </div>
+      <a class="nav-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSe-ANalO9LTou5ci9s4rJINnCRzZthixkKzy5RjrOZ7Rti6TA/viewform?usp=dialog" target="_blanky" rel="noopener noreferrer">Inquire now</a>
+    </div>
+  </nav>
+
+  <!-- ── Hero Section ── -->
+  <header class="hero">
+    <div class="hero-grid"></div>
+    <div class="container hero-container">
+      <div class="hero-content">
+        <div class="badge">
+          <span class="badge-dot"></span>
+          Nationally Certified Courses
+        </div>
+        <h1>Elevate Your Career in TESDA - LLDA Provincial Training Center</h1>
+        <p>Explore high-quality, certified technical and vocational courses designed to build your skills and empower your future.</p>
+        
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <span class="stat-num">19</span>
+            <span class="stat-label">Programs</span>
+          </div>
+          <div class="hero-stat">
+            <span class="stat-num">60–715</span>
+            <span class="stat-label">Hours</span>
+          </div>
+          <div class="hero-stat">
+            <span class="stat-num">NC I–IV</span>
+            <span class="stat-label">Levels</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="images/Untitled design (7).png" alt="TESDA Logo" class="floating-logo" />
+      </div>
+    </div>
+  </header>
+
+  <!-- ── Programs Section ── -->
+  <section class="programs-section" id="programs">
+    <div class="container">
+        <div class="section-header">
+        <div class="section-title">
+          <h2>Available Programs</h2>
+          <span class="count-pill" id="countPill">19 programs</span>
+        </div>
+        
+        <div class="toolbar">
+          <div class="search-wrap">
+            <svg class="search-icon" viewBox="0 0 24 24" stroke-width="2">
+              <circle cx="11" cy="11" r="8"/>
+              <path d="M21 21l-4.35-4.35"/>
+            </svg>
+            <input type="text" id="searchInput" placeholder="Search by name or level..." oninput="filter()" />
+          </div>
+          <div class="filter-group">
+            <button class="filter-btn active" onclick="setFilter('all', this)">All</button>
+            <button class="filter-btn" onclick="setFilter('NC I', this)">NC I</button>
+            <button class="filter-btn" onclick="setFilter('NC II', this)">NC II</button>
+            <button class="filter-btn" onclick="setFilter('NC III', this)">NC III</button>
+            <button class="filter-btn" onclick="setFilter('NC IV', this)">NC IV</button>
+            <button class="filter-btn" onclick="setFilter(null, this)">Short Course</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Grid of Program Cards -->
+      <div id="programGrid" class="program-grid">
+        <!-- Cards will be injected by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA Section ── -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-card">
+        <div class="cta-content">
+          <div class="cta-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+            </svg>
+          </div>
+          <div class="cta-text">
+            <h3>Didn't find what you're looking for?</h3>
+            <p>Browse the full list of TESDA-accredited technical-vocational institutions and programs.</p>
+          </div>
+        </div>
+        <a class="cta-btn" href="https://www.tesda.gov.ph/tvi" target="_blank">
+          Explore All Institutions
+          <svg viewBox="0 0 24 24">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+            <polyline points="15 3 21 3 21 9"/>
+            <line x1="10" y1="14" x2="21" y2="3"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer>
+    <div class="container">
+      <p>Data sourced from TESDA official training regulations &nbsp;·&nbsp; <a href="https://tesda.gov.ph" target="_blank">tesda.gov.ph</a></p>
+      <p class="copyright">&copy; 2026 TESDA Training Programs. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ── Program Details Modal ── -->
+  <div id="programModal" class="modal">
+    <div class="modal-overlay" onclick="closeModal()"></div>
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <div class="modal-header">
+        <span class="modal-level" id="modalLevel"></span>
+        <span class="modal-duration" id="modalDuration"></span>
+      </div>
+      <h2 class="modal-title" id="modalTitle"></h2>
+      <div class="modal-body">
+        <div class="modal-section">
+          <h3>Program Overview</h3>
+          <p id="modalOverview"></p>
+        </div>
+        <div class="modal-section">
+          <h3>What You'll Learn</h3>
+          <ul id="modalLearn"></ul>
+        </div>
+        <div class="modal-section">
+          <h3>Career Opportunities</h3>
+          <p id="modalCareers"></p>
+        </div>
+        <div class="modal-section">
+          <h3>Enrollment Requirements</h3>
+          <ul id="modalEnrollmentRequirements" class="enrollment-list"></ul>
+          <p class="modal-note" id="modalEnrollmentNote"></p>
+        </div>
+        <div class="modal-section">
+          <h3>Program Requirements</h3>
+          <ul id="modalRequirements"></ul>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a class="modal-btn primary" href="https://docs.google.com/forms/d/e/1FAIpQLSe-ANalO9LTou5ci9s4rJINnCRzZthixkKzy5RjrOZ7Rti6TA/viewform?usp=dialog" target="_blank">
+          Enroll Now
+        </a>
+        <a class="modal-btn secondary" href="index.html#location">
+          View Location
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

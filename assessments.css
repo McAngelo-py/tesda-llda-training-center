@@ -1,0 +1,269 @@
+/* Specific styles for Assessment page (no hero) */
+.assessments-page {
+  padding-top: 100px; /* Space for sticky navbar */
+  min-height: 80vh;
+}
+
+.assessment-header {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.assessment-header h1 {
+  font-size: 2.5rem;
+  color: var(--navy-blue);
+  margin-bottom: 1rem;
+}
+
+.assessment-header p {
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Fee Table Styles */
+.fee-section {
+  margin-top: 4rem;
+}
+
+.fee-table-container {
+  background: white;
+  border: 1px solid var(--border-color);
+  overflow-x: auto;
+  margin-top: 2rem;
+}
+
+.fee-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  border: 1px solid var(--border-color); /* Added outer border */
+}
+
+.fee-table th {
+  background: var(--bg-soft);
+  color: var(--navy-blue);
+  font-weight: 700;
+  padding: 1.5rem;
+  border: 1px solid var(--border-color); /* Added full border for outline */
+  white-space: nowrap;
+  font-size: 1.3rem; /* Bigger header */
+}
+
+.fee-table td {
+  padding: 1.5rem;
+  border: 1px solid var(--border-color); /* Added full border for outline */
+  color: var(--text-muted);
+  vertical-align: middle;
+  font-size: 1.15rem; /* Bigger qualification text */
+}
+
+.fee-table tbody tr:nth-child(even) {
+  background: var(--bg-soft); /* Zebra striping for better row tracking */
+}
+
+.fee-table td:first-child {
+  font-weight: 800; /* Extra bold */
+  color: var(--navy-blue);
+  font-size: 1.25rem; /* Even bigger than before */
+  background: rgba(0, 102, 204, 0.02); /* Subtle highlight background for the course column */
+  border-left: 5px solid var(--primary-blue); /* Strong blue accent on the left */
+  letter-spacing: -0.01em;
+}
+
+.fee-table tr {
+  border-bottom: 2px solid var(--border-color); /* Thicker separation between rows */
+}
+
+.fee-item {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.fee-label {
+  font-weight: 600;
+  color: var(--navy-blue);
+  font-size: 1.1rem; /* Bigger label */
+}
+
+.fee-price {
+  font-family: monospace;
+  font-weight: 700;
+  color: var(--primary-blue);
+  font-size: 1.25rem; /* Bigger price */
+}
+
+.assessment-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.assessment-card {
+  background: white;
+  padding: 2rem;
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+.assessment-card:hover {
+  border-color: var(--primary-blue);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transform: translateY(-5px);
+}
+
+.assessment-card h3 {
+  color: var(--navy-blue);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.assessment-card h3 svg {
+  width: 24px;
+  height: 24px;
+  color: var(--primary-blue);
+}
+
+.assessment-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.assessment-card li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.assessment-card li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--primary-blue);
+  font-weight: bold;
+}
+
+.process-section {
+  background: var(--bg-soft);
+  padding: 4rem 0;
+  margin: 4rem 0;
+}
+
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  counter-reset: step;
+}
+
+.step-card {
+  position: relative;
+  padding: 2rem;
+  background: white;
+  border-top: 4px solid var(--primary-blue);
+}
+
+.step-card::before {
+  counter-increment: step;
+  content: counter(step);
+  position: absolute;
+  top: -20px;
+  right: 20px;
+  font-size: 3rem;
+  font-weight: 800;
+  color: rgba(0, 102, 204, 0.1);
+}
+
+.step-card h4 {
+  margin-bottom: 0.5rem;
+  color: var(--navy-blue);
+}
+
+.step-card p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+@media (max-width: 768px) {
+  .assessments-page {
+    padding-top: 80px;
+  }
+  
+  .assessment-header h1 {
+    font-size: 2rem;
+  }
+
+  /* Responsive Fee Table */
+  .fee-table-container {
+    border: none;
+    overflow-x: visible;
+  }
+
+  .fee-table {
+    border: none;
+    display: block;
+  }
+
+  .fee-table thead {
+    display: none; /* Hide table headers on mobile */
+  }
+
+  .fee-table tbody {
+    display: block;
+  }
+
+  .fee-table tr {
+    display: block;
+    margin-bottom: 1.5rem;
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  .fee-table td {
+    display: block;
+    width: 100%;
+    padding: 1.25rem;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  .fee-table td:last-child {
+    border-bottom: none;
+  }
+
+  .fee-table td:first-child {
+    font-size: 1.2rem;
+    background: var(--bg-soft);
+    border-left: none;
+    border-bottom: 2px solid var(--primary-blue);
+    padding: 1rem 1.25rem;
+  }
+
+  .fee-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px dashed var(--border-color);
+  }
+
+  .fee-item:last-child {
+    border-bottom: none;
+  }
+
+  .fee-label {
+    font-size: 0.95rem;
+  }
+
+  .fee-price {
+    font-size: 1.1rem;
+  }
+}

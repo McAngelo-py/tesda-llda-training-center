@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TESDA Training Programs</title>
+  <title>About Us - TESDA LLDA Training Center</title>
   <link rel="icon" href="images/Untitled design (7).png" type="image/png" />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="about.css" />
 </head>
 <body class="loading">
 
@@ -14,7 +15,7 @@
     <div class="preloader-content">
       <img src="images/Untitled design (7).png" alt="TESDA Logo" class="preloader-logo" />
       <div class="preloader-spinner"></div>
-      <p>Loading Training Programs...</p>
+      <p>Loading About Page...</p>
     </div>
   </div>
 
@@ -26,75 +27,106 @@
         <span class="nav-logo-text">TESDA LLDA</span>
       </div>
       <div class="nav-links">
-        <a class="nav-link active" href="index.html#programs">Programs</a>
-        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link active" href="index.html">About</a>
+        <a class="nav-link" href="programs.html#programs">Programs</a>
+        <a class="nav-link" href="assessments.html">Assessments</a>
       </div>
-      <a class="nav-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSe-ANalO9LTou5ci9s4rJINnCRzZthixkKzy5RjrOZ7Rti6TA/viewform?usp=dialog" target="_blanky" rel="noopener noreferrer">Inquire now</a>
+      <a class="nav-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSe-ANalO9LTou5ci9s4rJINnCRzZthixkKzy5RjrOZ7Rti6TA/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">Inquire now</a>
     </div>
   </nav>
 
-  <!-- ── Hero Section ── -->
-  <header class="hero">
+  <!-- ── About Hero Section ── -->
+  <header class="hero about-hero">
     <div class="hero-grid"></div>
-    <div class="container hero-container">
-      <div class="hero-content">
+    <div class="container hero-container about-hero-container">
+      <div class="hero-content about-hero-content">
         <div class="badge">
           <span class="badge-dot"></span>
-          Nationally Certified Courses
+         Lingap ay Maaasahan
         </div>
-        <h1>Elevate Your Career in TESDA - LLDA Practical Training Center</h1>
-        <p>Explore high-quality, certified technical and vocational courses designed to build your skills and empower your future.</p>
-        
-        <div class="hero-stats">
-          <div class="hero-stat">
-            <span class="stat-num">16</span>
-            <span class="stat-label">Programs</span>
-          </div>
-          <div class="hero-stat">
-            <span class="stat-num">8–58</span>
-            <span class="stat-label">Days</span>
-          </div>
-          <div class="hero-stat">
-            <span class="stat-num">NC I–III</span>
-            <span class="stat-label">Levels</span>
-          </div>
-        </div>
-      </div>
-      <div class="hero-image">
-        <img src="images/Untitled design (7).png" alt="TESDA Logo" class="floating-logo" />
+        <h1>TESDA-LLDA Provincial Training Center</h1>
+       <center><p>Empowering the community through quality technical-vocational education and skill-building programs.</p></center>
       </div>
     </div>
   </header>
 
-  <!-- ── Programs Section ── -->
-  <section class="programs-section" id="programs">
+  <!-- ── About Content Section ── -->
+  <section class="about-section">
     <div class="container">
-      <div class="section-header">
-        <div class="section-title">
-          <h2>Available Programs</h2>
-          <span class="count-pill" id="countPill">16 programs</span>
+      <div class="about-grid">
+        <div class="about-image">
+          <img src="images/enhanced_image.png" alt="Training Center">
         </div>
-        
-        <div class="toolbar">
-          <div class="search-wrap">
-            <svg class="search-icon" viewBox="0 0 24 24" stroke-width="2">
-              <circle cx="11" cy="11" r="8"/>
-              <path d="M21 21l-4.35-4.35"/>
-            </svg>
-            <input type="text" id="searchInput" placeholder="Search by name or level..." oninput="filter()" />
-          </div>
-          <div class="filter-group">
-            <button class="filter-btn active" onclick="setFilter('all', this)">All</button>
-            <button class="filter-btn" onclick="setFilter('NC I', this)">NC I</button>
-            <button class="filter-btn" onclick="setFilter('NC II', this)">NC II</button>
-            <button class="filter-btn" onclick="setFilter('NC III', this)">NC III</button>
-          </div>
+        <div class="about-text">
+          <h2>Who We Are</h2>
+          <p>TESDA-LLDA Provincial Training Center, a TESDA Technology Institution located at KM. 70, Brgy. Bangyas, Calauan, Laguna was inaugurated on January 30, 2020. TESDA-LLDA PTC was established to address the need for skills training program of the residents in District III and IV in Laguna, mostly those living in remote areas that are hard to reach by other training institutions.</p>
         </div>
       </div>
 
-      <!-- Grid of Program Cards -->
-      <div id="programGrid" class="program-grid">
-        <!-- Cards will be injected by JavaScript -->
+      <div class="about-cards-grid">
+        <div class="about-card">
+          <h3>Our Mission</h3>
+          <p>TESDA sets direction, promulgates relevant standards, and implements programs geared towards quality assured and inclusive technical education and skills development and certification system.</p>
+        </div>
+        <div class="about-card">
+          <h3>Our Vision</h3>
+          <p>The transformational leader in the technical education and skills development of the Filipino workforce </p>
+        </div>
+        <div class="about-card">
+          <h3>Our Core Values</h3>
+          <p>Integrity, Excellence, Social Responsibility, and Continuous Improvement in everything we do to serve our students and the community.</p>
+        </div>
+      </div>
+
+      <!-- ── Location & Contact Info ── -->
+      <div class="about-location" id="location">
+        <div class="location-header">
+          <h2>Our Location</h2>
+          <p>Visit us at TESDA-LLDA Provincial Training Center</p>
+        </div>
+        <div class="location-content">
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3868.2723998165875!2d121.30922919999999!3d14.178817199999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd5fc3fa1df175%3A0x6be48b33bf858333!2sTESDA-LLDA%20Provincial%20Training%20Center!5e0!3m2!1sen!2sph!4v1776215538721!5m2!1sen!2sph"
+              width="100%"
+              height="450"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="TESDA-LLDA Provincial Training Center Location">
+            </iframe>
+          </div>
+          <div class="contact-info">
+            <h3>Contact Us</h3>
+            <div class="contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+              <p>Brgy. Bangyas, Calauan, Laguna</p>
+            </div>
+            <div class="contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+              <p>(049) 521-7427</p>
+            </div>
+            <div class="contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+              <p>0947-3580763</p>
+            </div>
+            <div class="contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+              <p><a href="mailto:tesda-llda@tesda.gov.ph" style="color: inherit; text-decoration: none;">tesda-llda@tesda.gov.ph</a></p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -110,16 +142,14 @@
             </svg>
           </div>
           <div class="cta-text">
-            <h3>Didn't find what you're looking for?</h3>
-            <p>Browse the full list of TESDA-accredited technical-vocational institutions and programs.</p>
+            <h3>Ready to start your journey?</h3>
+            <p>Explore our wide range of nationally certified training programs today.</p>
           </div>
         </div>
-        <a class="cta-btn" href="https://www.tesda.gov.ph/tvi" target="_blank">
-          Explore All Institutions
+        <a class="cta-btn" href="programs.html#programs">
+          View All Programs
           <svg viewBox="0 0 24 24">
-            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-            <polyline points="15 3 21 3 21 9"/>
-            <line x1="10" y1="14" x2="21" y2="3"/>
+            <path d="M5 12h14M12 5l7 7-7 7"/>
           </svg>
         </a>
       </div>
