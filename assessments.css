@@ -1,6 +1,330 @@
-/* Specific styles for Assessment page (no hero) */
+/* ── Common Styles (Preloader, Variables, Reset, Navbar, Hero, CTA, Footer, Responsive) ── */
+
+/* ── Preloader ── */
+.preloader {
+  position: fixed;
+  inset: 0;
+  background: #ffffff;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+.preloader-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.preloader-logo {
+  width: 80px;
+  height: 80px;
+  animation: pulse-logo 2s ease-in-out infinite;
+}
+
+.preloader-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--primary-light);
+  border-top: 3px solid var(--primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.preloader p {
+  font-weight: 600;
+  color: var(--secondary);
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.loading {
+  overflow: hidden;
+}
+
+.preloader-hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pulse-logo {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.1); opacity: 0.8; }
+}
+
+/* ── Modern Variables ── */
+:root {
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  --primary-light: #dbeafe;
+  --secondary: #0f172a;
+  --accent: #3b82f6;
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --text: #1e293b;
+  --text-muted: #64748b;
+  --border: #e2e8f0;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+  --container: 1200px;
+}
+
+/* ── Reset & Base ── */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* To account for the sticky navbar */
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+h1, h2, h3 {
+  color: var(--secondary);
+  line-height: 1.2;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s ease;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+/* ── Navbar ── */
+nav {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  height: 72px;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+  z-index: 1100;
+}
+
+.nav-logo-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.nav-logo-text {
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--secondary);
+}
+
+.nav-links {
+  display: flex;
+  gap: 8px;
+}
+
+.nav-link {
+  padding: 8px 16px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  border-radius: var(--radius-sm);
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--primary);
+  background: var(--primary-light);
+}
+
+.nav-cta {
+  background: var(--primary);
+  color: white;
+  padding: 10px 20px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.nav-cta.mobile-cta {
+  display: none;
+}
+
+.nav-cta:hover {
+  background: var(--primary-dark);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  padding: 8px;
+  color: var(--secondary);
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.nav-toggle svg {
+  width: 28px;
+  height: 28px;
+}
+
+/* ── CTA Section ── */
+.cta-section {
+  padding: 80px 0;
+}
+
+.cta-card {
+  background: var(--secondary);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  color: white;
+}
+
+.cta-content {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.cta-icon {
+  width: 64px;
+  height: 64px;
+  background: rgba(255,255,255,0.1);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.cta-icon svg {
+  width: 32px;
+  height: 32px;
+  stroke: white;
+  fill: none;
+  stroke-width: 2;
+}
+
+.cta-text h3 {
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+}
+
+.cta-text p {
+  color: rgba(255,255,255,0.7);
+}
+
+.cta-btn {
+  background: white;
+  color: var(--secondary);
+  padding: 16px 32px;
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  white-space: nowrap;
+}
+
+.cta-btn svg {
+  width: 20px;
+  height: 20px;
+  stroke: var(--secondary);
+}
+
+.cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* ── Footer ── */
+footer {
+  padding: 60px 0;
+  background: white;
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+
+footer p {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+footer a {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.copyright {
+  margin-top: 12px;
+  font-size: 0.75rem;
+}
+
+/* ── Assessment Page Specific Styles ── */
 .assessments-page {
-  padding-top: 100px; /* Space for sticky navbar */
+  padding-top: 100px;
   min-height: 80vh;
 }
 
@@ -11,7 +335,7 @@
 
 .assessment-header h1 {
   font-size: 2.5rem;
-  color: var(--navy-blue);
+  color: var(--secondary);
   margin-bottom: 1rem;
 }
 
@@ -28,51 +352,51 @@
 
 .fee-table-container {
   background: white;
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--border);
   overflow-x: auto;
   margin-top: 2rem;
+  border-radius: var(--radius-lg);
 }
 
 .fee-table {
   width: 100%;
   border-collapse: collapse;
   text-align: left;
-  border: 1px solid var(--border-color); /* Added outer border */
 }
 
 .fee-table th {
-  background: var(--bg-soft);
-  color: var(--navy-blue);
+  background: var(--bg);
+  color: var(--secondary);
   font-weight: 700;
   padding: 1.5rem;
-  border: 1px solid var(--border-color); /* Added full border for outline */
+  border: 1px solid var(--border);
   white-space: nowrap;
-  font-size: 1.3rem; /* Bigger header */
+  font-size: 1.3rem;
 }
 
 .fee-table td {
   padding: 1.5rem;
-  border: 1px solid var(--border-color); /* Added full border for outline */
+  border: 1px solid var(--border);
   color: var(--text-muted);
   vertical-align: middle;
-  font-size: 1.15rem; /* Bigger qualification text */
+  font-size: 1.15rem;
 }
 
 .fee-table tbody tr:nth-child(even) {
-  background: var(--bg-soft); /* Zebra striping for better row tracking */
+  background: var(--bg);
 }
 
 .fee-table td:first-child {
-  font-weight: 800; /* Extra bold */
-  color: var(--navy-blue);
-  font-size: 1.25rem; /* Even bigger than before */
-  background: rgba(0, 102, 204, 0.02); /* Subtle highlight background for the course column */
-  border-left: 5px solid var(--primary-blue); /* Strong blue accent on the left */
+  font-weight: 800;
+  color: var(--secondary);
+  font-size: 1.25rem;
+  background: rgba(37, 99, 235, 0.02);
+  border-left: 5px solid var(--primary);
   letter-spacing: -0.01em;
 }
 
 .fee-table tr {
-  border-bottom: 2px solid var(--border-color); /* Thicker separation between rows */
+  border-bottom: 2px solid var(--border);
 }
 
 .fee-item {
@@ -82,15 +406,15 @@
 
 .fee-label {
   font-weight: 600;
-  color: var(--navy-blue);
-  font-size: 1.1rem; /* Bigger label */
+  color: var(--secondary);
+  font-size: 1.1rem;
 }
 
 .fee-price {
   font-family: monospace;
   font-weight: 700;
-  color: var(--primary-blue);
-  font-size: 1.25rem; /* Bigger price */
+  color: var(--primary);
+  font-size: 1.25rem;
 }
 
 .assessment-grid {
@@ -103,18 +427,19 @@
 .assessment-card {
   background: white;
   padding: 2rem;
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
   transition: all 0.3s ease;
 }
 
 .assessment-card:hover {
-  border-color: var(--primary-blue);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border-color: var(--primary);
+  box-shadow: var(--shadow-lg);
   transform: translateY(-5px);
 }
 
 .assessment-card h3 {
-  color: var(--navy-blue);
+  color: var(--secondary);
   margin-bottom: 1rem;
   display: flex;
   align-items: center;
@@ -124,7 +449,7 @@
 .assessment-card h3 svg {
   width: 24px;
   height: 24px;
-  color: var(--primary-blue);
+  color: var(--primary);
 }
 
 .assessment-card ul {
@@ -144,12 +469,12 @@
   content: "•";
   position: absolute;
   left: 0;
-  color: var(--primary-blue);
+  color: var(--primary);
   font-weight: bold;
 }
 
 .process-section {
-  background: var(--bg-soft);
+  background: var(--bg);
   padding: 4rem 0;
   margin: 4rem 0;
 }
@@ -165,7 +490,8 @@
   position: relative;
   padding: 2rem;
   background: white;
-  border-top: 4px solid var(--primary-blue);
+  border-top: 4px solid var(--primary);
+  border-radius: var(--radius-md);
 }
 
 .step-card::before {
@@ -176,12 +502,12 @@
   right: 20px;
   font-size: 3rem;
   font-weight: 800;
-  color: rgba(0, 102, 204, 0.1);
+  color: rgba(37, 99, 235, 0.1);
 }
 
 .step-card h4 {
   margin-bottom: 0.5rem;
-  color: var(--navy-blue);
+  color: var(--secondary);
 }
 
 .step-card p {
@@ -190,6 +516,54 @@
 }
 
 @media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-cta.desktop-cta {
+    display: none;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Hidden by default */
+    width: 80%;
+    max-width: 350px;
+    height: 100vh;
+    background: white;
+    flex-direction: column;
+    padding: 100px 40px;
+    gap: 20px;
+    transition: right 0.3s ease-in-out;
+    box-shadow: -10px 0 30px rgba(0,0,0,0.1);
+    z-index: 1050;
+    display: flex;
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .nav-link {
+    font-size: 1.25rem;
+    padding: 12px 0;
+    width: 100%;
+    border-bottom: 1px solid var(--bg);
+    border-radius: 0;
+  }
+
+  .nav-link:hover, .nav-link.active {
+    background: none;
+    color: var(--primary);
+  }
+
+  .nav-cta.mobile-cta {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+  }
+
   .assessments-page {
     padding-top: 80px;
   }
@@ -198,7 +572,6 @@
     font-size: 2rem;
   }
 
-  /* Responsive Fee Table */
   .fee-table-container {
     border: none;
     overflow-x: visible;
@@ -210,7 +583,7 @@
   }
 
   .fee-table thead {
-    display: none; /* Hide table headers on mobile */
+    display: none;
   }
 
   .fee-table tbody {
@@ -221,10 +594,10 @@
     display: block;
     margin-bottom: 1.5rem;
     background: white;
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--border);
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    box-shadow: var(--shadow-sm);
   }
 
   .fee-table td {
@@ -241,9 +614,9 @@
 
   .fee-table td:first-child {
     font-size: 1.2rem;
-    background: var(--bg-soft);
+    background: var(--bg);
     border-left: none;
-    border-bottom: 2px solid var(--primary-blue);
+    border-bottom: 2px solid var(--primary);
     padding: 1rem 1.25rem;
   }
 
@@ -252,7 +625,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 0.5rem 0;
-    border-bottom: 1px dashed var(--border-color);
+    border-bottom: 1px dashed var(--border);
   }
 
   .fee-item:last-child {
@@ -265,5 +638,32 @@
 
   .fee-price {
     font-size: 1.1rem;
+  }
+
+  .cta-section {
+    padding: 64px 0;
+  }
+
+  .cta-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 32px 24px;
+    gap: 32px;
+  }
+
+  .cta-content {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .cta-icon {
+    margin: 0 auto;
+  }
+
+  .cta-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 14px 24px;
+    font-size: 0.95rem;
   }
 }

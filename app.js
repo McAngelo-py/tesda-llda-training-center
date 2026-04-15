@@ -440,6 +440,41 @@ document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") closeModal();
 });
 
+// Navigation Toggle Logic
+const navToggle = document.getElementById('navToggle');
+const navLinks = document.querySelector('.nav-links');
+
+if (navToggle && navLinks) {
+  const hamburgerIcon = navToggle.querySelector('.hamburger-icon');
+  const closeIcon = navToggle.querySelector('.close-icon');
+
+  navToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    const isActive = navLinks.classList.contains('active');
+    
+    if (isActive) {
+      hamburgerIcon.style.display = 'none';
+      closeIcon.style.display = 'block';
+      document.body.style.overflow = 'hidden';
+    } else {
+      hamburgerIcon.style.display = 'block';
+      closeIcon.style.display = 'none';
+      document.body.style.overflow = '';
+    }
+  });
+
+  // Close menu when clicking a link
+  const links = navLinks.querySelectorAll('.nav-link');
+  links.forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+      hamburgerIcon.style.display = 'block';
+      closeIcon.style.display = 'none';
+      document.body.style.overflow = '';
+    });
+  });
+}
+
 // Preloader handling
 window.addEventListener("load", () => {
   const preloader = document.getElementById("preloader");
