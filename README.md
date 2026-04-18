@@ -4,34 +4,42 @@ Official website for the **TESDA-LLDA Provincial Training Center** located in KM
 
 ## 🚀 Features
 
-- **Modern & Responsive Design**: Optimized for desktop, tablet, and mobile devices with a clean, professional aesthetic.
-- **Dynamic Program Directory**: Easily browse and search through 19+ National Certificate (NC) programs with real-time filtering by NC level.
-- **Interactive CBTMC Portal**: A dedicated section for Community-Based Training Management Component (CBTMC) featuring 30+ short-term livelihood courses with detailed descriptions.
-- **Competency Assessments**: Comprehensive information on assessment fees, requirements, and application processes for earning National Certificates.
-- **Mobile-Friendly Navigation**: Features a slide-in "hamburger" menu for seamless navigation on small screens.
-- **High Performance**: Optimized with independent, page-specific CSS files to ensure fast load times and no style inheritance conflicts.
+- **FAQ Chatbot Assistant**: A new, interactive digital assistant that provides instant answers to common questions about enrollment, requirements, location, and courses.
+- **Modern & Responsive Design**: Optimized for desktop, tablet, and mobile devices with a clean, professional aesthetic and a new blue color theme.
+- **Dynamic Program Directory**: Easily browse and search through National Certificate (NC) programs with real-time filtering.
+- **Interactive CBTMC Portal**: A dedicated section for Community-Based Training Management Component (CBTMC) featuring short-term livelihood courses.
+- **Competency Assessments**: Comprehensive information on assessment fees, requirements, and certification processes.
+- **High Performance**: Optimized with independent, page-specific CSS files and modular JavaScript.
 
 ## 📂 Project Structure
 
 - `index.html` & `about.css`: Home page featuring center history, mission, vision, and location.
-- `programs.html` & `programs.css`: Dynamic course catalog with search and NC level filtering.
+- `programs.html` & `programs.css`: Dynamic course catalog with search and level filtering.
 - `cbtmc.html` & `cbtmc.css`: Community-based training programs with interactive course details.
 - `assessments.html` & `assessments.css`: Information on competency assessments and certification fees.
-- `app.js`: Core logic for data rendering, filtering, modal management, and mobile navigation.
-- `images/`: High-quality assets including the institutional logo and hero photography.
+- `chatbot.js` & `chatbot.css`: New modular assistant for automated FAQ handling and conversational UI.
+- `app.js`: Core logic for data rendering, filtering, and modal management.
+- `images/`: High-quality assets including institutional logos and imagery.
+
+## 🤖 Chatbot Assistant
+
+The site now features a custom-built FAQ chatbot designed for "faster transactions." 
+- **Automatic Menu**: Greets users with a structured list of options (Courses, Enrollment, Requirements, etc.) upon opening.
+- **Conversational**: Responds to greetings, gratitude, and general inquiries using keyword-matching logic.
+- **Direct Links**: Provides immediate access to critical resources, such as the e-TESDA COVID-19 course.
 
 ## 🛠️ How to Use
 
 ### For Users
-1. **Explore Programs**: Visit the **Programs** page to see available NC courses. Use the search bar or filter buttons (NC I, NC II, etc.) to find specific training.
-2. **Community Courses**: Go to the **CBTMC** page to find short-term livelihood programs. Click on any course to see its duration, description, and enrollment requirements.
-3. **Get Certified**: Check the **Assessments** page to see the steps and fees required to validate your skills and earn a National Certificate.
-4. **Inquire**: Use the "Inquire Now" button found in the navigation bar to access the official inquiry form.
+1. **Interactive Help**: Click the chat icon at the bottom-right to get instant answers from the TESDA Assistant.
+2. **Explore Programs**: Visit the **Programs** page to see available NC courses.
+3. **Get Certified**: Check the **Assessments** page for earnable National Certificates.
+4. **Inquire**: Use the "Inquire Now" button in the navigation bar for official forms.
 
 ### For Developers
-1. **Local Development**: Simply open `index.html` in any modern web browser to view the site. No server setup is required.
-2. **Customizing Styles**: Each page has its own dedicated CSS file. For example, to change the look of the home page, edit `about.css`.
-3. **Updating Programs**: The course data is managed within `app.js`. You can easily add or modify programs by updating the `programs` array at the top of the script.
+1. **Chatbot Customization**: Modify `chatbot.js` to add new FAQ entries or adjust the welcome menu logic.
+2. **Color Theme**: The primary theme is now managed via CSS variables in `chatbot.css` and other style files (primary: `#2563eb`).
+3. **Updating Programs**: Course data remains managed within `app.js`.
 
 ## 📞 Contact Information
 

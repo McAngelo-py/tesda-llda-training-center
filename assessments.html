@@ -6,6 +6,7 @@
   <title>Assessments - TESDA LLDA Training Center</title>
   <link rel="icon" href="images/Untitled design (7).png" type="image/png" />
   <link rel="stylesheet" href="assessments.css" />
+  <link rel="stylesheet" href="chatbot.css" />
 </head>
 <body class="loading">
 
@@ -27,7 +28,7 @@
       </div>
       <div class="nav-links">
         <a class="nav-link" href="index.html">About</a>
-        <a class="nav-link" href="programs.html#programs">Programs</a>
+        <a class="nav-link" href="programs.html">Programs</a>
         <a class="nav-link" href="cbtmc.html">CBTMC</a>
         <a class="nav-link active" href="assessments.html">Assessments</a>
         <a class="nav-cta mobile-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSe-ANalO9LTou5ci9s4rJINnCRzZthixkKzy5RjrOZ7Rti6TA/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">Inquire now</a>
@@ -214,7 +215,7 @@
             <li>1 photocopy of valid I.D (issued by Government)</li>
             <li>1 photocopy birth certificate (PSA) *if married, pls bring photocopy of marriage contract instead</li>
             <li>Certificate of Employment</li>
-            <li>Certificate of "Practicing Covid-19, Preventive Measures in Workplace" (obtain via <a href="https://e-tesda.gov.ph" target="_blank" style="color: inherit;">e-tesda.gov.ph</a>)</li>
+            <li>Certificate of <a href="https://e-tesda.gov.ph/course/index.php?categoryid=1314" target="_blank" style="color: #2563eb; text-decoration: underline; font-weight: 600;">"Practicing Covid-19, Preventive Measures in Workplace"</a> (obtain via e-tesda.gov.ph)</li>
           </ul>
           <p class="modal-note" style="margin-top: 1rem; font-size: 0.85rem; color: var(--text-muted); font-style: italic;">
             * The COVID-19 certificate is automatically generated upon passing the summative test under the "HUMAN HEALTH/HEALTH CARE" course.
@@ -305,6 +306,51 @@
     </div>
   </footer>
 
+  <!-- ── Chatbot Widget ── -->
+  <div class="chatbot-toggle" id="chatbotToggle">
+    <svg viewBox="0 0 24 24">
+      <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/>
+    </svg>
+  </div>
+
+  <div class="chatbot-container" id="chatbotContainer">
+    <div class="chatbot-header">
+      <div class="chatbot-header-info">
+        <img src="images/Untitled design (7).png" alt="TESDA Logo">
+        <div>
+          <h3>TESDA LLDA Assistant</h3>
+          <p>Online • Powered by Gemini</p>
+        </div>
+      </div>
+      <div style="display: flex; gap: 10px;">
+        <button class="chatbot-clear" id="chatbotClear" title="Clear Chat">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 6h18M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+          </svg>
+        </button>
+        <button class="chatbot-close" id="chatbotClose">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="chatbot-messages" id="chatbotMessages">
+      <!-- Messages will appear here -->
+    </div>
+    <div class="chatbot-input-container">
+      <input type="text" id="chatbotInput" placeholder="Ask a question..." autocomplete="off">
+      <button class="chatbot-send" id="chatbotSend">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="22" y1="2" x2="11" y2="13"></line>
+          <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+        </svg>
+      </button>
+    </div>
+  </div>
+
   <script src="app.js"></script>
+  <script src="chatbot.js"></script>
 </body>
 </html>

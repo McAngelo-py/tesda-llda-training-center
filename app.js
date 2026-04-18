@@ -178,7 +178,7 @@ const programs = [
   },
   {
     name: "Organic Agriculture Production",
-    level: null,
+    level: "NC II",
     hours: 232,
     overview: "This qualification covers the competencies needed to produce farm products like chicken and vegetables, including organic fertilizers, concoctions, and extracts.",
     learn: [
@@ -253,7 +253,7 @@ const programs = [
   },
   {
     name: "Trainers Methodology Level II",
-    level: null,
+    level: "Level II",
     hours: 568,
     overview: "This course develops the knowledge, skills, and professional values of Level II TVET trainers, focusing on training program design, curriculum and material development, assessment tools, maintenance systems, and client training needs analysis.",
     learn: [
@@ -421,7 +421,7 @@ function openModal(index) {
   if (learnEl) learnEl.innerHTML = p.learn.map(item => `<li>${item}</li>`).join("");
   if (careersEl) careersEl.textContent = p.careers;
   if (enrollReqEl) enrollReqEl.innerHTML = GENERAL_ENROLLMENT_REQUIREMENTS.map(req => `<li>${req}</li>`).join("");
-  if (enrollNoteEl) enrollNoteEl.textContent = ENROLLMENT_NOTE;
+  if (enrollNoteEl) enrollNoteEl.innerHTML = ENROLLMENT_NOTE;
   if (reqEl) reqEl.innerHTML = p.requirements.map(req => `<li>${req}</li>`).join("");
 
   modal.classList.add("active");
