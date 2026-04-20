@@ -31,7 +31,7 @@ const faqData = [
   },
   {
     keywords: ['enroll', 'register', 'apply', 'how to enroll'],
-    answer: "To enroll, visit our center at KM. 70, Brgy. Bangyas, Calauan, Laguna, or click the 'Inquire Now' button to fill out our online inquiry form.",
+    answer: "To enroll, visit our center at KM. 70, Brgy. Bangyas, Calauan, Laguna, or click the 'Email us' button to send us a message.",
     suggestions: ['Requirements', 'Location']
   },
   {
