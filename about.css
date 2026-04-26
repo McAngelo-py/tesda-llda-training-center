@@ -702,6 +702,64 @@ footer a {
   line-height: 1.6;
 }
 
+/* ── Minimalist Catalog Section ── */
+.catalog-section {
+  padding: 60px 0;
+  background: white;
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+
+.catalog-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.catalog-label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--primary);
+  margin-bottom: 12px;
+}
+
+.catalog-content h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.catalog-content p {
+  color: var(--text-muted);
+  font-size: 1rem;
+  margin-bottom: 24px;
+}
+
+.catalog-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding: 8px 16px;
+  border: 1.5px solid var(--primary);
+  border-radius: var(--radius-sm);
+  transition: all 0.2s ease;
+}
+
+.catalog-link svg {
+  width: 18px;
+  height: 18px;
+}
+
+.catalog-link:hover {
+  background: var(--primary);
+  color: white;
+}
+
 /* ── Visual Fixes ── */
 .cta-btn svg {
   stroke: currentColor;

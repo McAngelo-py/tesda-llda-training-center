@@ -162,7 +162,7 @@ const programs = [
     requirements: ["Must have NC II in Electrical Installation", "Related work experience", "Advanced technical skills"]
   },
   {
-    name: "Housekeeping",
+    name: "Housekeeping NC II",
     level: "NC II",
     hours: 436,
     overview: "This course enhances the knowledge, skills, and professional attitude of housekeeping staff in guest room preparation, valet services, laundry, and premises cleaning in line with industry standards.",
@@ -238,7 +238,7 @@ const programs = [
   },
   {
     name: "Trainers Methodology Level I",
-    level: null,
+    level: "Level I",
     hours: 264,
     overview: "This qualification develops the knowledge, skills, and professional values of TVET trainers, focusing on instructional delivery, competency assessment, and training resource management in line with prevailing standards.",
     learn: [
