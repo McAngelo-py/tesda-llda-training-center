@@ -351,5 +351,213 @@
 
   <script src="app.js"></script>
   <script src="chatbot.js"></script>
+  <script>
+    const assessments = [
+      {
+        name: "Agroentrepreneurship NC II",
+        fees: { full: "₱ 854.00", coc1: "₱ 818.00", coc2: "₱ 809.00" },
+        description: "This assessment validates competencies in marketing and production coordination, market assessment, production planning, finance management, and produce marketing for agroentrepreneurship.",
+        careers: "Marketing Coordinator, Production Coordinator, Agri-Entrepreneur"
+      },
+      {
+        name: "Agroentrepreneurship NC III",
+        fees: { full: "₱ 853.00" },
+        description: "This assessment validates competencies in stakeholder engagement, product supply and finance management, farmer mobilization, and collective marketing in the agroenterprise industry.",
+        careers: "Farmer Leader, Agri-Enterprise Manager"
+      },
+      {
+        name: "Barangay Health Services NC II",
+        fees: { full: "₱ 935.00" },
+        description: "This assessment validates competencies in health promotion, disease prevention, household health monitoring, and proper management of health stations, supplies, and records.",
+        careers: "Barangay Health Worker, Community Health Aide"
+      },
+      {
+        name: "Bookkeeping NC III",
+        fees: { full: "₱ 845.00" },
+        description: "This assessment validates competencies in journalizing, posting, trial balance preparation, financial reporting, and internal control review in line with industry standards.",
+        careers: "Bookkeeper, Accounting Clerk, Finance Assistant"
+      },
+      {
+        name: "Carpentry II",
+        fees: { full: "₱ 1,539.00" },
+        description: "This assessment validates competencies in carpentry works, formwork, and structural carpentry applications for construction projects.",
+        careers: "Carpenter, Formwork Installer, Construction Worker"
+      },
+      {
+        name: "Dressmaking NC II",
+        fees: { full: "₱ 1,347.00", coc1: "₱ 838.00", coc2: "₱ 1,111.00" },
+        description: "This assessment validates competencies in pattern drafting and cutting, material preparation, sewing, and finishing of casual apparel in line with industry standards.",
+        careers: "Dressmaker, Garment Sewer, Fashion Assistant"
+      },
+      {
+        name: "Driving NC II",
+        fees: { withCar: "₱ 819.00", withoutCar: "₱ 1,034.00" },
+        description: "This assessment validates competencies in light vehicle operation, road safety, traffic regulations, defensive driving, and basic vehicle maintenance.",
+        careers: "Professional Driver, Light Vehicle Driver, Company Driver"
+      },
+      {
+        name: "Early Childhood Care and Development Services NC III",
+        fees: { full: "₱ 881.00" },
+        description: "This assessment validates competencies in managing early childhood centers, assessing child development, and implementing the ECCD curriculum for ages 0–4.",
+        careers: "Day Care Worker, Early Childhood Educator, Child Development Teacher"
+      },
+      {
+        name: "Electrical Installation and Maintenance NC II",
+        fees: { full: "₱ 1,849.00" },
+        description: "This assessment validates competencies in installing and maintaining electrical wiring, lighting, and related equipment in residential buildings with voltages up to 600 volts.",
+        careers: "Maintenance Electrician, Residential Wiring Electrician"
+      },
+      {
+        name: "Electrical Installation and Maintenance NC III",
+        fees: { full: "₱ 1,896.00" },
+        description: "This assessment validates competencies in industrial electrical installation, automation and control systems, and advanced troubleshooting.",
+        careers: "Industrial Electrician, Electrical Leadman, Electrical Foreman"
+      },
+      {
+        name: "Housekeeping NC II",
+        fees: { full: "₱ 1,108.00", coc1: "₱ 923.00", coc2: "₱ 997.00", coc3: "₱ 929.00", coc4: "₱ 953.00" },
+        description: "This assessment validates competencies in guest room preparation, valet services, laundry, and premises cleaning in line with industry standards.",
+        careers: "Room Attendant, Housekeeper, Room Maid, Hotel Staff"
+      },
+      {
+        name: "Masonry NC I",
+        fees: { full: "₱ 1,153.00" },
+        description: "This assessment validates competencies in basic masonry works, brick and block laying, and concrete finishing.",
+        careers: "Mason, Bricklayer, Concrete Worker"
+      },
+      {
+        name: "Organic Agriculture Production NC II",
+        fees: { full: "₱ 979.00", coc1: "₱ 808.00", coc2: "₱ 814.00", coc3: "₱ 810.00", coc4: "₱ 816.00", coc5: "₱ 815.00", coc6: "₱ 803.00" },
+        description: "This assessment validates competencies in producing farm products like chicken and vegetables, including organic fertilizers, concoctions, and extracts.",
+        careers: "Organic Agriculture Farmer, Organic Livestock Raiser, Farm Technician"
+      },
+      {
+        name: "Plumbing NC I",
+        fees: { full: "₱ 1,609.00" },
+        description: "This assessment validates competencies in basic plumbing installation, pipe fitting, and maintenance of plumbing systems.",
+        careers: "Plumber, Pipe Fitter, Maintenance Technician"
+      },
+      {
+        name: "PV Systems Installation NC II",
+        fees: { full: "₱ 927.00" },
+        description: "This assessment validates competencies in site assessment, component compliance, system installation and commissioning, and documentation for PV systems.",
+        careers: "PV Systems Technician, PV Systems Commissioning Technician, Solar Installer"
+      },
+      {
+        name: "Scaffolding Works (Supported Type Scaffold) NC II",
+        fees: { full: "₱ 1,276.00" },
+        description: "This assessment validates competencies in erecting, dismantling, and maintaining supported type scaffolds in construction sites.",
+        careers: "Scaffolder, Scaffold Erector, Construction Worker"
+      },
+      {
+        name: "Shielded Metal Arc Welding NC I",
+        fees: { full: "₱ 2,234.00" },
+        description: "This assessment validates competencies in welding setup, material preparation, fitting, carbon steel plate welding, and weld repair.",
+        careers: "Plate Welder, Pipe Welder, Welding Technician"
+      },
+      {
+        name: "Shielded Metal Arc Welding NC II",
+        fees: { full: "₱ 2,697.00" },
+        description: "This assessment validates competencies in advanced carbon steel welding, pipe welding techniques, welding position mastery, and weld inspection.",
+        careers: "Plate/Pipe Welder, Certified Welder, Welding Specialist"
+      },
+      {
+        name: "Trainer's Methodology Level I (Option A)",
+        fees: { full: "₱ 3,323.00", coc1: "₱ 1,661.00", coc2: "₱ 1,662.00" },
+        description: "This assessment validates competencies in CBT instructional delivery, competency-based assessment, and training resource management for TVET trainers.",
+        careers: "TVET Trainer, Competency Assessor, Training Facilitator"
+      },
+      {
+        name: "Trainer's Methodology Level I (Option B)",
+        fees: { full: "₱ 9,736.00", coc1: "₱ 1,658.00", coc2: "₱ 1,601.00", coc3: "₱ 1,600.00", coc4: "₱ 1,601.00", coc5: "₱ 1,601.00", coc6: "₱ 1,675.00" },
+        description: "This comprehensive assessment validates all competencies required for Trainer's Methodology Level I, including training program design and curriculum development.",
+        careers: "TVET Trainer, Competency Assessor, Training Designer"
+      }
+    ];
+
+    function openAssessmentModal(index) {
+      const assessment = assessments[index];
+      if (!assessment) return;
+
+      const modal = document.getElementById("assessmentModal");
+      if (!modal) return;
+
+      const titleEl = document.getElementById("assessmentModalTitle");
+      const feesEl = document.getElementById("assessmentModalFees");
+      const descriptionEl = document.getElementById("assessmentModalDescription");
+      const careersEl = document.getElementById("assessmentModalCareers");
+
+      if (titleEl) titleEl.textContent = assessment.name;
+
+      let feesHtml = "";
+      if (assessment.fees.full) feesHtml += `<div class="fee-item"><span class="fee-label">Full Assessment:</span><span class="fee-value">${assessment.fees.full}</span></div>`;
+      if (assessment.fees.coc1) feesHtml += `<div class="fee-item"><span class="fee-label">COC 1:</span><span class="fee-value">${assessment.fees.coc1}</span></div>`;
+      if (assessment.fees.coc2) feesHtml += `<div class="fee-item"><span class="fee-label">COC 2:</span><span class="fee-value">${assessment.fees.coc2}</span></div>`;
+      if (assessment.fees.coc3) feesHtml += `<div class="fee-item"><span class="fee-label">COC 3:</span><span class="fee-value">${assessment.fees.coc3}</span></div>`;
+      if (assessment.fees.coc4) feesHtml += `<div class="fee-item"><span class="fee-label">COC 4:</span><span class="fee-value">${assessment.fees.coc4}</span></div>`;
+      if (assessment.fees.coc5) feesHtml += `<div class="fee-item"><span class="fee-label">COC 5:</span><span class="fee-value">${assessment.fees.coc5}</span></div>`;
+      if (assessment.fees.coc6) feesHtml += `<div class="fee-item"><span class="fee-label">COC 6:</span><span class="fee-value">${assessment.fees.coc6}</span></div>`;
+      if (assessment.fees.withCar) feesHtml += `<div class="fee-item"><span class="fee-label">With CAR:</span><span class="fee-value">${assessment.fees.withCar}</span></div>`;
+      if (assessment.fees.withoutCar) feesHtml += `<div class="fee-item"><span class="fee-label">Without CAR:</span><span class="fee-value">${assessment.fees.withoutCar}</span></div>`;
+      if (feesEl) feesEl.innerHTML = feesHtml;
+
+      if (descriptionEl) descriptionEl.textContent = assessment.description;
+      if (careersEl) careersEl.textContent = assessment.careers;
+
+      modal.classList.add("active");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeAssessmentModal() {
+      const modal = document.getElementById("assessmentModal");
+      if (modal) {
+        modal.classList.remove("active");
+        document.body.style.overflow = "";
+      }
+    }
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeAssessmentModal();
+    });
+
+    window.addEventListener("load", () => {
+      const tableRows = document.querySelectorAll(".fee-table tbody tr");
+      tableRows.forEach((row, index) => {
+        row.style.cursor = "pointer";
+        row.addEventListener("click", () => openAssessmentModal(index));
+      });
+    });
+  </script>
+
+  <!-- ── Assessment Details Modal ── -->
+  <div id="assessmentModal" class="modal">
+    <div class="modal-overlay" onclick="closeAssessmentModal()"></div>
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeAssessmentModal()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <h2 class="modal-title" id="assessmentModalTitle"></h2>
+      
+      <div class="modal-body">
+        <div class="modal-section">
+          <h3>Assessment Fees</h3>
+          <div class="assessment-fees-list" id="assessmentModalFees"></div>
+        </div>
+        
+        <div class="modal-section">
+          <h3>Assessment Overview</h3>
+          <p id="assessmentModalDescription"></p>
+        </div>
+        
+        <div class="modal-section">
+          <h3>Career Opportunities</h3>
+          <p id="assessmentModalCareers"></p>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
