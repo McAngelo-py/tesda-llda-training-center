@@ -360,7 +360,14 @@ function filter() {
 
   const filtered = programs.filter(p => {
     const matchSearch = query ? p.name.toLowerCase().includes(query) : true;
-    const matchFilter = activeFilter === "all" || p.level === activeFilter;
+    let matchFilter;
+    if (activeFilter === "all") {
+      matchFilter = true;
+    } else if (activeFilter === "trainers") {
+      matchFilter = p.name.toLowerCase().includes("trainers methodology") || p.name.toLowerCase().includes("trainer's methodology");
+    } else {
+      matchFilter = p.level === activeFilter;
+    }
     return matchSearch && matchFilter;
   });
 
