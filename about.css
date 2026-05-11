@@ -827,6 +827,12 @@ footer a {
   font-size: 1.125rem;
   font-weight: 600;
   color: var(--secondary);
+  transition: all 0.2s ease;
+}
+
+.faq-question:hover {
+  background: var(--bg);
+  color: var(--primary);
 }
 
 .faq-question svg {
@@ -844,13 +850,14 @@ footer a {
 .faq-answer {
   max-height: 0;
   overflow: hidden;
-  transition: all 0.3s ease-out;
+  transition: max-height 0.4s ease-out, padding 0.4s ease-out;
   padding: 0 24px;
 }
 
 .faq-item.active .faq-answer {
-  max-height: 300px;
+  max-height: 600px;
   padding: 0 24px 24px;
+  transition: max-height 0.4s ease-in, padding 0.4s ease-in;
 }
 
 .faq-answer p {
