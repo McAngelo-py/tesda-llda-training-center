@@ -241,6 +241,17 @@
             <p>We are located at KM. 70, Brgy. Bangyas, Calauan, Laguna. You can find our exact location on the map in the section above.</p>
           </div>
         </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>What are your training hours?</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <p>Our regular training hours are from 8:00 AM to 5:00 PM.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -343,5 +354,24 @@
 
   <script src="app.js"></script>
   <script src="chatbot.js"></script>
+  <script>
+    // Simple and reliable FAQ Accordion
+    document.querySelectorAll('.faq-question').forEach(function(button) {
+      button.onclick = function() {
+        const faqItem = this.closest('.faq-item');
+        const isActive = faqItem.classList.contains('active');
+        
+        // Close all FAQ items
+        document.querySelectorAll('.faq-item').forEach(function(item) {
+          item.classList.remove('active');
+        });
+        
+        // Open this one if it wasn't active
+        if (!isActive) {
+          faqItem.classList.add('active');
+        }
+      };
+    });
+  </script>
 </body>
 </html>
