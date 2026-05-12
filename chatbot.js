@@ -25,18 +25,18 @@ const faqData = [
     suggestions: ['Courses', 'Requirements', 'Location']
   },
   {
-    keywords: ['course', 'program', 'available', 'offer', 'what are the courses'],
-    answer: "We offer various technical-vocational programs including: \n- Agroentrepreneurship (NC II, III, IV) \n- Electrical Installation & Maintenance (NC II, III) \n- Shielded Metal Arc Welding (NC I, II) \n- Driving (NC II) \n- Dressmaking (NC II) \n- Housekeeping (NC II) \n- Bookkeeping (NC III) \n- Early Childhood Care & Development Service (NC III) \n- Barangay Health Services (NC II) \n- Organic Agriculture Production (NC II) \n- PV Systems Installation (NC II) \n- Trainers Methodology (Level I, II) \n\nCheck our 'Programs' page for more details!",
+    keywords: ['course', 'program', 'available', 'offer', 'what are the courses', 'micro credential', 'trainers methodology', 'short course', 'others'],
+    answer: "We offer 19 technical-vocational programs: \n\n**NC Levels:** \n- NC I: Masonry, Shielded Metal Arc Welding, Plumbing \n- NC II: Agroentrepreneurship, Barangay Health Services, Carpentry, Dressmaking, Driving, Electrical Installation & Maintenance, Housekeeping, Organic Agriculture Production, PV Systems Installation, Scaffolding Works, Shielded Metal Arc Welding \n- NC III: Agroentrepreneurship, Bookkeeping, Early Childhood Care & Development Services, Electrical Installation & Maintenance \n- NC IV: Agroentrepreneurship \n\n**Other Programs:** \n- Micro Credential courses \n- Trainers Methodology (Level I, II) \n- Community-Based Trainer's Methodology \n\nCheck our 'Programs' page for filters and details!",
     suggestions: ['How to enroll?', 'Requirements']
   },
   {
-    keywords: ['enroll', 'register', 'apply', 'how to enroll'],
-    answer: "To enroll, visit our center at KM. 70, Brgy. Bangyas, Calauan, Laguna, or click the 'Email us' button to send us a message.",
+    keywords: ['enroll', 'register', 'apply', 'how to enroll', 'inquire'],
+    answer: "To enroll, visit our Programs page and click 'Inquire now' to fill out the form, or visit our center at KM. 70, Brgy. Bangyas, Calauan, Laguna.",
     suggestions: ['Requirements', 'Location']
   },
   {
     keywords: ['requirement', 'document', 'need', 'what are the requirements'],
-    answer: "General requirements include: \n1. Form 138/137 or Diploma/TOR \n2. Barangay/Police/NBI Clearance \n3. 2 pcs PSA Birth Certificate \n4. 4 pcs Passport Size Picture \n5. 6 pcs 1x1 ID Picture \n6. Marriage Certificate (for married females) \n7. Certificate of <a href=\"https://e-tesda.gov.ph/course/index.php?categoryid=1314\" target=\"_blank\" style=\"color: #2563eb; text-decoration: underline;\">'Practicing Covid-19, Preventive Measures'</a> (thru e-tesda.gov.ph)",
+    answer: "General requirements include: \n1. Photocopy of High School Report Card (Form 138) or Diploma (Form 137) \n2. Photocopy of Birth Certificate (PSA) \n3. Barangay/Police/NBI Clearance \n4. 2 pcs – Passport Size Picture (white background, with collar and nametag) \n5. 6 pcs – 1x1 ID Picture (chemically printed, white background, with collar and name tag) \n6. Marriage Certificate (for females, if married) \n7. Certificate of \"Practicing Covid-19, Preventive Measures in Workplace\" (obtain via e-tesda.gov.ph)",
        suggestions: ['Training fee?', 'Schedule']
      },
   {
@@ -45,24 +45,29 @@ const faqData = [
     suggestions: ['Contact details', 'Schedule']
   },
   {
-    keywords: ['fee', 'payment', 'cost', 'pay', 'free'],
-    answer: "Most of our programs are scholarship-based (FREE) under various TESDA programs. Some specialized courses may have minimal assessment fees.",
+    keywords: ['fee', 'payment', 'cost', 'pay', 'free', 'assessment'],
+    answer: "Most of our programs are scholarship-based (FREE) under various TESDA programs. For assessment fees, please visit our 'Assessments' page or contact us directly.",
     suggestions: ['Available courses', 'How to enroll?']
   },
   {
-    keywords: ['schedule', 'time', 'when', 'duration'],
-    answer: "Training schedules vary per program. Most classes run from 8:00 AM to 5:00 PM, Monday to Friday. Please contact us for specific course start dates.",
+    keywords: ['schedule', 'time', 'when', 'duration', 'training hours'],
+    answer: "Training schedules vary per program. Our regular training hours are from 8:00 AM to 5:00 PM. Please contact us for specific course start dates.",
     suggestions: ['Available courses', 'Requirements']
   },
   {
     keywords: ['contact', 'number', 'phone', 'email', 'call'],
-    answer: "You can reach us at: \n- Phone: (049) 521-7427 / 0947-3580763 \n- Email: tesda-llda@tesda.gov.ph",
+    answer: "You can reach us at: \n- Phone: (049) 521-7427 \n- Mobile: 0947-3580763 \n- Email: tesda-llda@tesda.gov.ph",
     suggestions: ['Location', 'How to enroll?']
   },
   {
-    keywords: ['id', 'certification', 'certificate', 'nc'],
-    answer: "Upon completion, students undergo assessment for National Certification (NC I/II). Certificates and IDs are issued once you pass the assessment.",
+    keywords: ['id', 'certification', 'certificate', 'nc', 'assessment'],
+    answer: "Upon completion, students undergo assessment for National Certification (NC I/II/III/IV). Certificates are issued once you pass the assessment. Visit our 'Assessments' page for more details!",
     suggestions: ['Available courses', 'Requirements']
+  },
+  {
+    keywords: ['cbt', 'community', 'cbtmc', 'community based'],
+    answer: "We offer Community Based Training (CBT) programs! Visit our 'Community Based Training' page for more information.",
+    suggestions: ['Available courses', 'How to enroll?']
   }
 ];
 
