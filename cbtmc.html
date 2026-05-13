@@ -60,6 +60,124 @@
     </div>
   </header>
 
+  <!-- ── Available Courses Section ── -->
+  <section class="cbtmc-section" style="background: var(--bg);">
+    <div class="container">
+      <div class="section-header" style="text-align: center; margin-bottom: 3rem;">
+        <h2>Available Community-Based Courses</h2>
+        <p style="color: var(--text-muted); max-width: 600px; margin: 1rem auto;">Explore our short-term courses designed for immediate community impact and livelihood development.</p>
+        
+        <!-- Search Bar -->
+        <div class="cbt-search-wrapper">
+          <div class="cbt-search-container">
+            <svg class="cbt-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"/>
+              <path d="M21 21l-4.35-4.35"/>
+            </svg>
+            <input 
+              type="text" 
+              id="cbtSearchInput" 
+              class="cbt-search-input"
+              placeholder="Search courses..."
+            />
+          </div>
+        </div>
+      </div>
+      
+      <div class="courses-grid">
+        <!-- Home Cleaning -->
+        <div class="course-category">
+          <h3>Home Cleaning & Hygiene</h3>
+          <ul class="course-list">
+            <li onclick="showCbtmcDetails('Dishwashing Liquid Making', 'Learn to mix surfactants and degreasers to create effective and safe dishwashing soap for household use.', '1 Hour')">Dishwashing Liquid Making <span>1 Hour</span></li>
+            <li onclick="showCbtmcDetails('Liquid Laundry Detergent', 'Formulate concentrated liquid soap specifically designed for washing clothes, focusing on stain removal.', '1 Hour')">Liquid Laundry Detergent <span>1 Hour</span></li>
+            <li onclick="showCbtmcDetails('Powder Detergent Making', 'Traditional powder soap formulation techniques for high-efficiency cleaning and whitening.', '1 Hour')">Powder Detergent Making <span>1 Hour</span></li>
+            <li onclick="showCbtmcDetails('Fabric Conditioner Making', 'Creating softening agents that add long-lasting fragrance and static control to your laundry.', '1 Hour')">Fabric Conditioner Making <span>1 Hour</span></li>
+            <li onclick="showCbtmcDetails('Hand Sanitizer Making', 'Producing alcohol-based sanitizers with skin-safe moisturizing additives for personal hygiene.', '1 Hour')">Hand Sanitizer Making <span>1 Hour</span></li>
+            <li onclick="showCbtmcDetails('Body Wash Making', 'Formulating gentle, skin-cleansing liquid soap with pleasant fragrances for daily use.', '1 Hour')">Body Wash Making <span>1 Hour</span></li>
+            <li onclick="showCbtmcDetails('Perfume Making', 'Introduction to scent profiles and alcohol-based fragrance oil mixing to create custom perfumes.', '1 Hour')">Perfume Making <span>1 Hour</span></li>
+          </ul>
+        </div>
+
+        <!-- Meat Processing -->
+        <div class="course-category">
+          <h3>Meat Processing</h3>
+          <ul class="course-list">
+            <li onclick="showCbtmcDetails('Burger Patty Making', 'Techniques for grinding, seasoning, and shaping meat for commercial-quality burgers at home.', '2 Hours')">Burger Patty Making <span>2 Hours</span></li>
+            <li onclick="showCbtmcDetails('Skinless Longganisa Making', 'Traditional Filipino breakfast sausage preparation without the need for casings.', '2 Hours')">Skinless Longganisa Making <span>2 Hours</span></li>
+            <li onclick="showCbtmcDetails('Tocino Making', 'Curing pork in a sweet and savory marinade, a classic Filipino meat preservation technique.', '2 Hours')">Tocino Making <span>2 Hours</span></li>
+            <li onclick="showCbtmcDetails('Siomai Making', 'Preparing savory meat fillings and wrapping techniques for authentic steamed dumplings.', '2 Hours')">Siomai Making <span>2 Hours</span></li>
+          </ul>
+        </div>
+
+        <!-- Fish Processing -->
+        <div class="course-category">
+          <h3>Fish Processing</h3>
+          <ul class="course-list">
+            <li onclick="showCbtmcDetails('Fish Deboning', 'Proper techniques for removing fish bones while preserving the meat and fillet quality.', '2 Hours')">Fish Deboning <span>2 Hours</span></li>
+            <li onclick="showCbtmcDetails('Smoked Fish Making', 'Traditional smoking methods to preserve and flavor fish for extended shelf life.', '6 Hours')">Smoked Fish Making <span>6 Hours</span></li>
+            <li onclick="showCbtmcDetails('Fish Ball Making', 'Creating delicious fish balls from fresh fish meat, perfect for street food or home business.', '3 Hours')">Fish Ball Making <span>3 Hours</span></li>
+          </ul>
+        </div>
+
+        <!-- Electricity & Solar -->
+        <div class="course-category">
+          <h3>Electricity & Solar</h3>
+          <ul class="course-list">
+            <li onclick="showCbtmcDetails('Basic Electrical Wiring', 'Fundamental circuits, safety protocols, and residential wiring techniques for home maintenance.', '16 Hours')">Basic Electrical Wiring <span>16 Hours</span></li>
+            <li onclick="showCbtmcDetails('CCTV Installation', 'Setting up surveillance cameras, DVRs, and network monitoring systems for home security.', '16 Hours')">CCTV Installation <span>16 Hours</span></li>
+            <li onclick="showCbtmcDetails('Fire Detection & Alarm System', 'Installing smoke detectors, heat sensors, and alarm panels to ensure residential fire safety.', '16 Hours')">Fire Detection & Alarm System <span>16 Hours</span></li>
+            <li onclick="showCbtmcDetails('Solar Powered Lighting', 'Mounting panels and wiring battery systems for independent, eco-friendly solar lighting.', '24 Hours')">Solar Powered Lighting <span>24 Hours</span></li>
+          </ul>
+        </div>
+
+        <!-- Garments -->
+        <div class="course-category">
+          <h3>Garments</h3>
+          <ul class="course-list">
+            <li onclick="showCbtmcDetails('Tote Bag Making', 'Basic sewing techniques for durable and eco-friendly carry bags using various fabrics.', '16 Hours')">Tote Bag Making <span>16 Hours</span></li>
+            <li onclick="showCbtmcDetails('Curtain Making', 'Measuring, cutting, and stitching professional window treatments for home improvement.', '16 Hours')">Curtain Making <span>16 Hours</span></li>
+            <li onclick="showCbtmcDetails('Bedsheet Making', 'Creating fitted and flat sheets with clean finishing and standard measurements.', '16 Hours')">Bedsheet Making <span>16 Hours</span></li>
+            <li onclick="showCbtmcDetails('Pillow Case Making', 'Sewing standard and decorative pillow covers with various closure styles and patterns.', '16 Hours')">Pillow Case Making <span>16 Hours</span></li>
+            <li onclick="showCbtmcDetails('Rag Making', 'Repurposing fabric scraps into useful household cleaning tools through creative sewing.', '16 Hours')">Rag Making <span>16 Hours</span></li>
+          </ul>
+        </div>
+
+        <!-- Candle Making -->
+        <div class="course-category">
+          <h3>Candle Making</h3>
+          <ul class="course-list">
+            <li onclick="showCbtmcDetails('Molded Unscented Candle', 'Basics of melting wax and using molds to create standard pillars and taper candles.', '1.5 Hours')">Molded Unscented Candle <span>1.5 Hours</span></li>
+            <li onclick="showCbtmcDetails('Molded Scented Candle', 'Incorporating fragrance oils into molded wax for aromatic effects and decorative use.', '1.5 Hours')">Molded Scented Candle <span>1.5 Hours</span></li>
+            <li onclick="showCbtmcDetails('Unscented Candle (Jar/Tin)', 'Pouring wax into containers for stable, long-burning unscented candles.', '1.5 Hours')">Unscented Candle (Jar/Tin) <span>1.5 Hours</span></li>
+            <li onclick="showCbtmcDetails('Scented Candle (Jar/Tin)', 'Creating beautiful container candles with custom scent blends and aromatic oils.', '1.5 Hours')">Scented Candle (Jar/Tin) <span>1.5 Hours</span></li>
+          </ul>
+        </div>
+
+        <!-- Other Courses -->
+        <div class="course-category">
+          <h3>Other Courses</h3>
+          <ul class="course-list">
+            <li onclick="showCbtmcDetails('Perform Basic Welding', 'Introductory arc welding techniques for basic metal repair and simple fabrication projects.', '40 Hours')">Perform Basic Welding <span>40 Hours</span></li>
+            <li onclick="showCbtmcDetails('Basic Defensive Driving', 'Safe driving techniques to avoid accidents and manage road risks effectively.', '24 Hours')">Basic Defensive Driving <span>24 Hours</span></li>
+            <li onclick="showCbtmcDetails('Safety in the Workplace', 'Understanding OSH standards, hazard identification, and safety protocols for a healthy environment.', '4 Hours')">Safety in the Workplace <span>4 Hours</span></li>
+          </ul>
+        </div>
+
+        <!-- Entrepreneurship -->
+        <div class="course-category full-width">
+          <h3>Entrepreneurship</h3>
+          <div class="entrep-info">
+            <p><strong>Note:</strong> Product Costing and Pricing is included in all topics.</p>
+          </div>
+          <ul class="course-list">
+            <li onclick="showCbtmcDetails('How to Start a Business', 'Fundamental steps to register, launch, and manage a small community enterprise successfully.', '24 Hours')">How to Start a Business <span>24 Hours</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ── About CBT Section ── -->
   <section class="cbtmc-section">
     <div class="container">
@@ -163,98 +281,6 @@
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── Available Courses Section ── -->
-  <section class="cbtmc-section" style="background: var(--bg);">
-    <div class="container">
-      <div class="section-header" style="text-align: center; margin-bottom: 3rem;">
-        <h2>Available Community-Based Courses</h2>
-        <p style="color: var(--text-muted); max-width: 600px; margin: 1rem auto;">Explore our short-term courses designed for immediate community impact and livelihood development.</p>
-      </div>
-      
-      <div class="courses-grid">
-        <!-- Home Cleaning -->
-        <div class="course-category">
-          <h3>Home Cleaning & Hygiene</h3>
-          <ul class="course-list">
-            <li onclick="showCbtmcDetails('Dishwashing Liquid Making', 'Learn to mix surfactants and degreasers to create effective and safe dishwashing soap for household use.', '1 Hour')">Dishwashing Liquid Making <span>1 Hour</span></li>
-            <li onclick="showCbtmcDetails('Liquid Laundry Detergent', 'Formulate concentrated liquid soap specifically designed for washing clothes, focusing on stain removal.', '1 Hour')">Liquid Laundry Detergent <span>1 Hour</span></li>
-            <li onclick="showCbtmcDetails('Powder Detergent Making', 'Traditional powder soap formulation techniques for high-efficiency cleaning and whitening.', '1 Hour')">Powder Detergent Making <span>1 Hour</span></li>
-            <li onclick="showCbtmcDetails('Fabric Conditioner Making', 'Creating softening agents that add long-lasting fragrance and static control to your laundry.', '1 Hour')">Fabric Conditioner Making <span>1 Hour</span></li>
-            <li onclick="showCbtmcDetails('Hand Sanitizer Making', 'Producing alcohol-based sanitizers with skin-safe moisturizing additives for personal hygiene.', '1 Hour')">Hand Sanitizer Making <span>1 Hour</span></li>
-            <li onclick="showCbtmcDetails('Body Wash Making', 'Formulating gentle, skin-cleansing liquid soap with pleasant fragrances for daily use.', '1 Hour')">Body Wash Making <span>1 Hour</span></li>
-            <li onclick="showCbtmcDetails('Perfume Making', 'Introduction to scent profiles and alcohol-based fragrance oil mixing to create custom perfumes.', '1 Hour')">Perfume Making <span>1 Hour</span></li>
-          </ul>
-        </div>
-
-        <!-- Meat Processing -->
-        <div class="course-category">
-          <h3>Meat Processing</h3>
-          <ul class="course-list">
-            <li onclick="showCbtmcDetails('Burger Patty Making', 'Techniques for grinding, seasoning, and shaping meat for commercial-quality burgers at home.', '2 Hours')">Burger Patty Making <span>2 Hours</span></li>
-            <li onclick="showCbtmcDetails('Skinless Longganisa Making', 'Traditional Filipino breakfast sausage preparation without the need for casings.', '2 Hours')">Skinless Longganisa Making <span>2 Hours</span></li>
-            <li onclick="showCbtmcDetails('Tocino Making', 'Curing pork in a sweet and savory marinade, a classic Filipino meat preservation technique.', '2 Hours')">Tocino Making <span>2 Hours</span></li>
-            <li onclick="showCbtmcDetails('Siomai Making', 'Preparing savory meat fillings and wrapping techniques for authentic steamed dumplings.', '2 Hours')">Siomai Making <span>2 Hours</span></li>
-          </ul>
-        </div>
-
-        <!-- Electricity & Solar -->
-        <div class="course-category">
-          <h3>Electricity & Solar</h3>
-          <ul class="course-list">
-            <li onclick="showCbtmcDetails('Basic Electrical Wiring', 'Fundamental circuits, safety protocols, and residential wiring techniques for home maintenance.', '16 Hours')">Basic Electrical Wiring <span>16 Hours</span></li>
-            <li onclick="showCbtmcDetails('CCTV Installation', 'Setting up surveillance cameras, DVRs, and network monitoring systems for home security.', '16 Hours')">CCTV Installation <span>16 Hours</span></li>
-            <li onclick="showCbtmcDetails('Fire Detection & Alarm System', 'Installing smoke detectors, heat sensors, and alarm panels to ensure residential fire safety.', '16 Hours')">Fire Detection & Alarm System <span>16 Hours</span></li>
-            <li onclick="showCbtmcDetails('Solar Powered Lighting', 'Mounting panels and wiring battery systems for independent, eco-friendly solar lighting.', '24 Hours')">Solar Powered Lighting <span>24 Hours</span></li>
-          </ul>
-        </div>
-
-        <!-- Garments -->
-        <div class="course-category">
-          <h3>Garments</h3>
-          <ul class="course-list">
-            <li onclick="showCbtmcDetails('Tote Bag Making', 'Basic sewing techniques for durable and eco-friendly carry bags using various fabrics.', '16 Hours')">Tote Bag Making <span>16 Hours</span></li>
-            <li onclick="showCbtmcDetails('Curtain Making', 'Measuring, cutting, and stitching professional window treatments for home improvement.', '16 Hours')">Curtain Making <span>16 Hours</span></li>
-            <li onclick="showCbtmcDetails('Bedsheet Making', 'Creating fitted and flat sheets with clean finishing and standard measurements.', '16 Hours')">Bedsheet Making <span>16 Hours</span></li>
-            <li onclick="showCbtmcDetails('Pillow Case Making', 'Sewing standard and decorative pillow covers with various closure styles and patterns.', '16 Hours')">Pillow Case Making <span>16 Hours</span></li>
-            <li onclick="showCbtmcDetails('Rag Making', 'Repurposing fabric scraps into useful household cleaning tools through creative sewing.', '16 Hours')">Rag Making <span>16 Hours</span></li>
-          </ul>
-        </div>
-
-        <!-- Candle Making -->
-        <div class="course-category">
-          <h3>Candle Making</h3>
-          <ul class="course-list">
-            <li onclick="showCbtmcDetails('Molded Unscented Candle', 'Basics of melting wax and using molds to create standard pillars and taper candles.', '1.5 Hours')">Molded Unscented Candle <span>1.5 Hours</span></li>
-            <li onclick="showCbtmcDetails('Molded Scented Candle', 'Incorporating fragrance oils into molded wax for aromatic effects and decorative use.', '1.5 Hours')">Molded Scented Candle <span>1.5 Hours</span></li>
-            <li onclick="showCbtmcDetails('Unscented Candle (Jar/Tin)', 'Pouring wax into containers for stable, long-burning unscented candles.', '1.5 Hours')">Unscented Candle (Jar/Tin) <span>1.5 Hours</span></li>
-            <li onclick="showCbtmcDetails('Scented Candle (Jar/Tin)', 'Creating beautiful container candles with custom scent blends and aromatic oils.', '1.5 Hours')">Scented Candle (Jar/Tin) <span>1.5 Hours</span></li>
-          </ul>
-        </div>
-
-        <!-- Other Courses -->
-        <div class="course-category">
-          <h3>Other Courses</h3>
-          <ul class="course-list">
-            <li onclick="showCbtmcDetails('Perform Basic Welding', 'Introductory arc welding techniques for basic metal repair and simple fabrication projects.', '40 Hours')">Perform Basic Welding <span>40 Hours</span></li>
-            <li onclick="showCbtmcDetails('Basic Defensive Driving', 'Safe driving techniques to avoid accidents and manage road risks effectively.', '24 Hours')">Basic Defensive Driving <span>24 Hours</span></li>
-            <li onclick="showCbtmcDetails('Safety in the Workplace', 'Understanding OSH standards, hazard identification, and safety protocols for a healthy environment.', '4 Hours')">Safety in the Workplace <span>4 Hours</span></li>
-          </ul>
-        </div>
-
-        <!-- Entrepreneurship -->
-        <div class="course-category full-width">
-          <h3>Entrepreneurship</h3>
-          <div class="entrep-info">
-            <p><strong>Note:</strong> Product Costing and Pricing is included in all topics.</p>
-          </div>
-          <ul class="course-list">
-            <li onclick="showCbtmcDetails('How to Start a Business', 'Fundamental steps to register, launch, and manage a small community enterprise successfully.', '24 Hours')">How to Start a Business <span>24 Hours</span></li>
-          </ul>
         </div>
       </div>
     </div>
@@ -384,6 +410,43 @@
   </div>
 
   <script>
+    // CBT Search Filter
+    const cbtSearchInput = document.getElementById('cbtSearchInput');
+    const courseCategories = document.querySelectorAll('.course-category');
+
+    cbtSearchInput.addEventListener('input', function() {
+      const searchTerm = this.value.toLowerCase().trim();
+      
+      courseCategories.forEach(category => {
+        const categoryTitle = category.querySelector('h3').textContent.toLowerCase();
+        const courseItems = category.querySelectorAll('.course-list li');
+        let hasVisibleCourse = false;
+        
+        courseItems.forEach(item => {
+          const courseName = item.textContent.toLowerCase();
+          
+          if (courseName.includes(searchTerm) || categoryTitle.includes(searchTerm)) {
+            item.style.display = '';
+            hasVisibleCourse = true;
+          } else {
+            item.style.display = 'none';
+          }
+        });
+        
+        if (searchTerm === '' || hasVisibleCourse || categoryTitle.includes(searchTerm)) {
+          category.style.display = '';
+          
+          if (categoryTitle.includes(searchTerm)) {
+            courseItems.forEach(item => {
+              item.style.display = '';
+            });
+          }
+        } else {
+          category.style.display = 'none';
+        }
+      });
+    });
+
     function showCbtmcDetails(title, description, duration) {
       const modal = document.getElementById('cbtmcModal');
       document.getElementById('cbtmcModalTitle').innerText = title;
