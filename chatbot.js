@@ -66,7 +66,7 @@ const faqData = [
   },
   {
     keywords: ['cbt', 'community', 'cbtmc', 'community based'],
-    answer: "We offer Community Based Training (CBT) programs! Visit our 'Community Based Training' page for more information.",
+    answer: "We offer Community Based Training (CBT) programs! Our courses include: \n\n**Home Cleaning & Hygiene:** \n- Dishwashing Liquid Making \n- Laundry Detergent (Liquid & Powder) \n- Fabric Conditioner Making \n- Hand Sanitizer, Body Wash, Perfume \n\n**Meat & Fish Processing:** \n- Burger Patty, Longganisa, Tocino, Siomai \n- Fish Deboning, Smoked Fish, Fish Ball Making \n\n**Electricity & Solar:** \n- Basic Electrical Wiring \n- CCTV Installation \n- Fire Detection & Alarm System \n- Solar Powered Lighting \n\n**Garments:** \n- Tote Bag, Curtain, Bedsheet, Pillow Case, Rag Making \n\n**Candle Making:** \n- Molded (Scented & Unscented) \n- Jar/Tin Candles \n\n**Other Courses:** \n- Basic Welding \n- Defensive Driving \n- Workplace Safety \n\n**Entrepreneurship:** \n- How to Start a Business \n\nVisit our 'Community Based Training' page for details!",
     suggestions: ['Available courses', 'How to enroll?']
   }
 ];
