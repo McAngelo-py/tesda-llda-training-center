@@ -238,7 +238,7 @@ const programs = [
   },
   {
     name: "Trainers Methodology Level I",
-    level: "Level I",
+    level: "NC I",
     hours: 264,
     overview: "This qualification develops the knowledge, skills, and professional values of TVET trainers, focusing on instructional delivery, competency assessment, and training resource management in line with prevailing standards.",
     learn: [
@@ -253,7 +253,7 @@ const programs = [
   },
   {
     name: "Trainers Methodology Level II",
-    level: "Level II",
+    level: "NC I",
     hours: 568,
     overview: "This course develops the knowledge, skills, and professional values of Level II TVET trainers, focusing on training program design, curriculum and material development, assessment tools, maintenance systems, and client training needs analysis.",
     learn: [
@@ -265,6 +265,21 @@ const programs = [
     ],
     careers: "Curriculum Designer, Instructional Designer, Training Designer/Developer",
     requirements: ["Must have TM Level I", "Extensive TVET experience", "Strategic thinking"]
+  },
+  {
+    name: "Entrepreneurship LEVEL IV",
+    level: "NC IV",
+    hours: 239,
+    overview: "This qualification develops the competencies to start, manage, and grow a small enterprise, covering business planning, financial management, marketing, and operations.",
+    learn: [
+      "Advanced business planning",
+      "Financial management and analysis",
+      "Strategic marketing",
+      "Operations management",
+      "Business growth strategies"
+    ],
+    careers: "Entrepreneur, Business Owner, Small Business Manager",
+    requirements: ["Must have relevant business experience", "At least 18 years old", "Basic accounting knowledge"]
   },
   {
     name: "Bookkeeping NC III",
@@ -364,7 +379,7 @@ function filter() {
     if (activeFilter === "all") {
       matchFilter = true;
     } else if (activeFilter === "trainers") {
-      matchFilter = p.name.toLowerCase().includes("trainers methodology") || p.name.toLowerCase().includes("trainer's methodology");
+      matchFilter = p.level === null;
     } else {
       matchFilter = p.level === activeFilter;
     }
