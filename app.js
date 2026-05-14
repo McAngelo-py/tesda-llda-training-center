@@ -381,9 +381,9 @@ function filter() {
     } else if (activeFilter === "trainers") {
       matchFilter = p.name.includes("Provide Basic Health Services to the Community") || p.name.includes("Entrepreneurship LEVEL IV");
     } else if (activeFilter === null) {
-      matchFilter = p.name.includes("Trainers Methodology") || p.name.includes("Community-Based Trainer's Methodology Course");
+      matchFilter = p.name.includes("Community-Based Trainer's Methodology Course");
     } else {
-      matchFilter = p.level === activeFilter;
+      matchFilter = p.level === activeFilter && !p.name.includes("Entrepreneurship LEVEL IV");
     }
     return matchSearch && matchFilter;
   });
