@@ -379,7 +379,9 @@ function filter() {
     if (activeFilter === "all") {
       matchFilter = true;
     } else if (activeFilter === "trainers") {
-      matchFilter = p.level === null || p.name.includes("Entrepreneurship LEVEL IV");
+      matchFilter = p.name.includes("Community-Based Trainer's Methodology Course") || p.name.includes("Entrepreneurship LEVEL IV");
+    } else if (activeFilter === null) {
+      matchFilter = p.name.includes("Provide Basic Health Services to the Community");
     } else {
       matchFilter = p.level === activeFilter;
     }
