@@ -253,7 +253,7 @@ const programs = [
   },
   {
     name: "Trainers Methodology Level II",
-    level: "NC I",
+    level: "NC II",
     hours: 568,
     overview: "This course develops the knowledge, skills, and professional values of Level II TVET trainers, focusing on training program design, curriculum and material development, assessment tools, maintenance systems, and client training needs analysis.",
     learn: [
@@ -379,7 +379,7 @@ function filter() {
     if (activeFilter === "all") {
       matchFilter = true;
     } else if (activeFilter === "trainers") {
-      matchFilter = p.level === null;
+      matchFilter = p.level === null || p.name.includes("Entrepreneurship LEVEL IV");
     } else {
       matchFilter = p.level === activeFilter;
     }
